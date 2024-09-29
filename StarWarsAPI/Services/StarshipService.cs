@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
-using StarWarsAPIChallenge.Models;
+using StarWarsAPI.Models;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 

@@ -1,4 +1,4 @@
-﻿namespace StarWarsAPIChallenge.Models
+﻿namespace StarWarsAPI.Models
 {
     public class StarshipResponse
     {
