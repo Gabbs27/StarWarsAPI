@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StarWarsAPI.Services;
-using StarWarsAPI.Services;
 using System.Threading.Tasks;
 
 namespace StarWarsAPIChallenge.Controllers
@@ -25,10 +24,10 @@ namespace StarWarsAPIChallenge.Controllers
 
             if (starships.Count == 0)
             {
-                return NoContent();  // Devuelve un 204 si no hay naves espaciales
+                return NoContent();  
             }
 
-            return Ok(starships);  // Devuelve los datos como JSON
+            return Ok(starships);  
         }
     }
 }
