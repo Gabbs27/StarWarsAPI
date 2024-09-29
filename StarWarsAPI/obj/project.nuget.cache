@@ -1,15 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "2/s2KNgXNkGfobsIL53z9H7aAUQKbodsnAKGl0jwqPzMnXTwYWX6SqVIL2hbwKjNZxmCsCOq6M3OWtw+Tf/MHw==",
+  "dgSpecHash": "ba1dvdCR43AEJBo/PAnV1H9uDCYxV7WySxoxP2AJQP7lNzkHiBAWRGOzXCcx7VnhiugqVu3pgm6TmWs02dbAfw==",
   "success": true,
   "projectFilePath": "/Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/StarWarsAPI.csproj",
   "expectedPackageFiles": [
-    "/Users/gabriel/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "/Users/gabriel/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
-    "/Users/gabriel/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "/Users/gabriel/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "/Users/gabriel/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/gabriel/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "/Users/gabriel/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.12/microsoft.aspnetcore.authentication.jwtbearer.6.0.12.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/microsoft.bcl.asyncinterfaces/8.0.0/microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/microsoft.bcl.timeprovider/8.0.1/microsoft.bcl.timeprovider.8.0.1.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/microsoft.identitymodel.abstractions/8.1.0/microsoft.identitymodel.abstractions.8.1.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.1.0/microsoft.identitymodel.jsonwebtokens.8.1.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/microsoft.identitymodel.logging/8.1.0/microsoft.identitymodel.logging.8.1.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/microsoft.identitymodel.protocols/6.10.0/microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.10.0/microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/microsoft.identitymodel.tokens/8.1.0/microsoft.identitymodel.tokens.8.1.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/swashbuckle.aspnetcore/6.8.0/swashbuckle.aspnetcore.6.8.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/swashbuckle.aspnetcore.swagger/6.8.0/swashbuckle.aspnetcore.swagger.6.8.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.8.0/swashbuckle.aspnetcore.swaggergen.6.8.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.8.0/swashbuckle.aspnetcore.swaggerui.6.8.0.nupkg.sha512",
+    "/Users/gabriel/.nuget/packages/system.identitymodel.tokens.jwt/8.1.0/system.identitymodel.tokens.jwt.8.1.0.nupkg.sha512"
   ],
   "logs": []
 }
