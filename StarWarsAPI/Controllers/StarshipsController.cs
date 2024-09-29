@@ -18,16 +18,17 @@ namespace StarWarsAPIChallenge.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> GetStarships([FromQuery] string? manufacturer)
+        public async Task<IActionResult> GetStarships([FromQuery] string? manufacturer, [FromQuery] int page = 1, [FromQuery] int limit = 10)
         {
-            var starships = await _starshipService.GetStarshipsAsync(manufacturer);
+            var starships = await _starshipService.GetStarshipsAsync(manufacturer, page, limit);
 
             if (starships.Count == 0)
             {
-                return NoContent();  
+                return NoContent();
             }
 
-            return Ok(starships);  
+            return Ok(starships);
         }
+
     }
 }

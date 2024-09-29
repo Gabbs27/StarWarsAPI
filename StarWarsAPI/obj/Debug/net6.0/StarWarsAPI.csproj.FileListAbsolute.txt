@@ -35,10 +35,4 @@
 /Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/StarWarsAPI.pdb
 /Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/StarWarsAPI.genruntimeconfig.cache
 /Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/ref/StarWarsAPI.dll
-/Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/StarWarsAPI.sourcelink.json
-/Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/staticwebassets/msbuild.StarWarsAPI.Microsoft.AspNetCore.StaticWebAssets.props
-/Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/staticwebassets/msbuild.build.StarWarsAPI.props
-/Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.StarWarsAPI.props
-/Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.StarWarsAPI.props
-/Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/staticwebassets.pack.json
-/Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/StarWars.D4244DC2.Up2Date
+/Users/gabriel/Desktop/Programacion/net/StarWarsAPI/StarWarsAPI/obj/Debug/net6.0/StarWarsAPI.csproj.CopyComplete

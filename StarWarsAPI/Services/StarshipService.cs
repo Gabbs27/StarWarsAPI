@@ -18,10 +18,14 @@ namespace StarWarsAPI.Services
             _logger = logger;
         }
 
-        public async Task<List<Starship>> GetStarshipsAsync(string? manufacturer)
+        public async Task<List<Starship>> GetStarshipsAsync(string? manufacturer, int page = 1, int limit = 10)
         {
             var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync("https://swapi.dev/api/starships/");
+
+            // Construct the paginated URL
+            var url = $"https://swapi.dev/api/starships/?page={page}";
+
+            var response = await client.GetAsync(url);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -29,24 +33,21 @@ namespace StarWarsAPI.Services
             }
 
             var starshipsData = await response.Content.ReadAsStringAsync();
-
-
             var starshipsResponse = JsonConvert.DeserializeObject<StarshipResponse>(starshipsData);
-
 
             var starships = starshipsResponse?.Results ?? new List<Starship>();
 
-
+            // Filter by manufacturer
             if (!string.IsNullOrEmpty(manufacturer))
             {
                 string normalizedManufacturer = manufacturer.Trim().ToLower();
-
                 starships = starships
                     .Where(s => s.Manufacturer.ToLower().Contains(normalizedManufacturer))
                     .ToList();
             }
 
-            return starships;
+            return starships.Take(limit).ToList();  // Return the limited number of results
         }
+
     }
 }
