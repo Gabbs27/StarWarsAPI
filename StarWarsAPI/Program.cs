@@ -43,6 +43,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 // Add HttpClient for external API calls
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<StarshipService>();
+builder.Services.AddMemoryCache();
+
 
 
 // Add Swagger for API documentation
