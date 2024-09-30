@@ -23,18 +23,20 @@ namespace StarWarsAPI.Services
 
         public async Task<List<Starship>> GetStarshipsAsync(string? manufacturer, int page = 1, int limit = 10)
         {
-            string cacheKey = $"Starships_Page_{page}_Limit_{limit}";
+            string cacheKey = $"starships_{manufacturer}_{page}_{limit}";
+            if (_cache.TryGetValue(cacheKey, out List<Starship> cachedStarships))
+            {
+                return cachedStarships;
+            }
 
-            if (!_cache.TryGetValue(cacheKey, out List<Starship> cachedStarships))
+            try
             {
                 var client = _httpClientFactory.CreateClient();
-                var url = $"https://swapi.dev/api/starships/?page={page}";
-
-                var response = await client.GetAsync(url);
+                var response = await client.GetAsync($"https://swapi.dev/api/starships/?page={page}");
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    throw new HttpRequestException("Error fetching starships");
+                    throw new HttpRequestException("Error fetching starships from external API");
                 }
 
                 var starshipsData = await response.Content.ReadAsStringAsync();
@@ -42,22 +44,27 @@ namespace StarWarsAPI.Services
 
                 var starships = starshipsResponse?.Results ?? new List<Starship>();
 
-                // Filter by manufacturer
                 if (!string.IsNullOrEmpty(manufacturer))
                 {
-                    string normalizedManufacturer = manufacturer.Trim().ToLower();
                     starships = starships
-                        .Where(s => s.Manufacturer.ToLower().Contains(normalizedManufacturer))
+                        .Where(s => s.Manufacturer.ToLower().Contains(manufacturer.Trim().ToLower()))
                         .ToList();
                 }
 
-                // Cache the starships for 10 minutes
-                _cache.Set(cacheKey, starships.Take(limit).ToList(), TimeSpan.FromMinutes(10));
+                _cache.Set(cacheKey, starships);
+
                 return starships;
             }
-
-            // Return cached starships if they exist
-            return cachedStarships;
+            catch (HttpRequestException ex)
+            {
+                _logger.LogError(ex, "HTTP request error occurred while fetching starships");
+                throw;  // Re-throw to let the test catch the exception
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching starships data");
+                throw new Exception("An error occurred while fetching starships data. Please try again later.");
+            }
         }
     }
 }

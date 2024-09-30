@@ -108,7 +108,15 @@ app.Use(async (context, next) =>
     catch (Exception ex)
     {
         context.Response.StatusCode = 500;
-        await context.Response.WriteAsJsonAsync(new { error = "An unexpected error occurred.", details = ex.Message });
+        context.Response.ContentType = "application/json";
+        var response = new { message = "An unexpected error occurred.", details = ex.Message };
+
+        // Log the exception
+        var logger = context.RequestServices.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Unhandled exception occurred.");
+
+        // Return JSON response
+        await context.Response.WriteAsJsonAsync(response);
     }
 });
 
